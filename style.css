@@ -144,13 +144,13 @@ nav {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
 .about-text {
+    flex: 1;
     font-size: 1.1rem;
 }
 
@@ -169,6 +169,13 @@ nav {
     font-weight: bold;
 }
 
+.about-right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .rat-manifesto {
     background: #000;
     color: #fff;
@@ -180,6 +187,26 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-transform: lowercase;
+}
+
+.rat-manifesto .about-list {
+    margin-top: 1rem;
+    text-align: left;
+    color: #fff;
+}
+
+.collagen-box {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.collagen-box .about-list {
+    color: #000;
+}
+
+.collagen-box .about-list li {
+    border-bottom: 1px solid #ccc;
 }
 
 /* Cookie Menu */
@@ -374,6 +401,35 @@ nav {
     text-align: center;
     font-weight: bold;
     margin: 1rem 0;
+}
+
+/* Join Section */
+.join {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+
+.join-box {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.social-link {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1rem;
+    border: 2px solid #fff;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 /* Footer */
