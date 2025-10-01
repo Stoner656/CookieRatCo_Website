@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Entrance Animation -->
+    <div class="entrance-animation" id="entranceAnimation">
+        <div class="mouse-with-cookie">
+            <span class="cookie">🍪</span>
+            <span class="mouse">🐀</span>
+        </div>
+    </div>
+
     <header>
         <nav class="container">
             <div class="logo">cookie rat co.</div>
@@ -214,13 +222,6 @@
             type();
         }
 
-        // Initialize typewriter effect on load
-        window.addEventListener('load', () => {
-            const subtitle = document.querySelector('.hero .subtitle');
-            const originalText = subtitle.textContent;
-            typeWriter(subtitle, originalText, 80);
-        });
-
         // Random glitch effect on logo
         setInterval(() => {
             const logo = document.querySelector('.logo');
@@ -231,6 +232,26 @@
                 }, 300);
             }
         }, 3000);
+
+        // Entrance animation
+        window.addEventListener('load', () => {
+            const entranceAnimation = document.getElementById('entranceAnimation');
+            const subtitle = document.querySelector('.hero .subtitle');
+            const originalText = subtitle.textContent;
+
+            // Hide the subtitle initially
+            subtitle.style.opacity = '0';
+
+            setTimeout(() => {
+                entranceAnimation.style.opacity = '0';
+                setTimeout(() => {
+                    entranceAnimation.style.display = 'none';
+                    // Start typewriter effect after entrance animation ends
+                    subtitle.style.opacity = '1';
+                    typeWriter(subtitle, originalText, 80);
+                }, 500);
+            }, 2500);
+        });
     </script>
 </body>
 </html>
