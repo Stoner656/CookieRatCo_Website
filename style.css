@@ -380,7 +380,7 @@ nav {
 
 /* Ingredients Section */
 .ingredients-section {
-    margin-top: 3rem;
+    margin: 3rem 0 2rem 0;
     padding: 2rem;
     background: #f5f5f5;
     border: 2px solid #000;
