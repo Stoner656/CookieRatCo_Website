@@ -4,14 +4,22 @@
  */
 
 // Typewriter effect for hero subtitle
-function typeWriter(element, text, speed = 100) {
+function typeWriter(element, text, speed = 200) {
     element.innerHTML = '';
     let i = 0;
     function type() {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+            // Don't show underscore when typing the period
+            if (text.charAt(i) === '.') {
+                element.innerHTML = text.substring(0, i + 1);
+            } else {
+                element.innerHTML = text.substring(0, i + 1) + '_';
+            }
             i++;
             setTimeout(type, speed);
+        } else {
+            // Remove the underscore when typing is complete
+            element.innerHTML = text;
         }
     }
     type();
@@ -30,9 +38,17 @@ setInterval(() => {
 
 // Start typewriter effect on page load
 window.addEventListener('load', () => {
-    const subtitle = document.querySelector('.hero .subtitle');
-    const originalText = subtitle.textContent;
+    const heroTitle = document.querySelector('.hero h1');
 
-    // Start typewriter effect immediately
-    typeWriter(subtitle, originalText, 80);
+    if (heroTitle) {
+        const originalText = heroTitle.textContent;
+
+        // Clear text immediately
+        heroTitle.innerHTML = '';
+
+        // Start typewriter effect after a short delay
+        setTimeout(() => {
+            typeWriter(heroTitle, originalText, 150);
+        }, 1000);
+    }
 });
