@@ -34,16 +34,13 @@
 }
 
 .hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 6rem;
+    font-weight: 400;
     text-transform: lowercase;
     letter-spacing: -2px;
     color: #fff;
-    overflow: hidden;
-    white-space: nowrap;
     margin: 0 auto;
-    width: 0;
-    animation: typing 2s steps(16) 1s forwards;
+    min-height: 6rem;
 }
 
 .hero .subtitle {
