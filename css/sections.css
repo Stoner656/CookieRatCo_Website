@@ -1,0 +1,255 @@
+/**
+ * Section-specific styles
+ * Hero, about, menu, order, join sections
+ */
+
+/* Hero Section */
+.hero {
+    padding: 120px 0 80px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 3px solid #000;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: -2px;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Rat Playground Section */
+.rat-playground {
+    background: #fff;
+    padding: 40px 0 60px 0;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.playground-area {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.playground-hint {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+/* About Section */
+.about {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    background: #fff;
+    padding: 2rem;
+    border: 2px solid #000;
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+.about-right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.rat-manifesto {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.rat-manifesto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+.rat-manifesto .about-list {
+    margin-top: 1rem;
+    text-align: left;
+    color: #fff;
+}
+
+.collagen-box {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.collagen-box .about-list {
+    color: #000;
+}
+
+.collagen-box .about-list li {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Menu Section */
+.menu {
+    background: #fff;
+    padding: 80px 0;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 3rem 0 2rem 0;
+    max-width: 100%;
+}
+
+.series-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    margin: 3rem 0 2rem 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    border: 2px solid #000;
+}
+
+.ingredients-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.ingredients-section p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.flavor-note {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.allergen-warning {
+    background: #fff3cd;
+    border: 1px solid #856404;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Order Section */
+.order {
+    background: #000;
+    color: #fff;
+    padding: 80px 0;
+    text-align: left;
+}
+
+.order h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.order-questions {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.order-steps {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-step {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.order-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+.order-step p {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.pickup-info {
+    background: #333;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 2px solid #fff;
+}
+
+.cutoff-warning {
+    background: #ff4444;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Join Section */
+.join {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+
+.join-box {
+    margin: 0 auto;
+    max-width: 800px;
+}

@@ -1,0 +1,158 @@
+/**
+ * Animations and keyframes
+ * Entrance animations, rat animations, and other effects
+ */
+
+/* Cookie and Rat interactive elements */
+.cookie-draggable {
+    position: absolute;
+    right: 0px; /* Start at right border */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: auto;
+    cursor: grab;
+    user-select: none;
+    pointer-events: auto;
+    transition: none;
+    image-rendering: crisp-edges;
+    z-index: 1;
+}
+
+.rat-following {
+    position: absolute;
+    right: -140px; /* To the RIGHT of cookie: -(cookie width 100px + gap 40px) */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: auto;
+    pointer-events: none;
+    transition: none;
+    image-rendering: crisp-edges;
+    z-index: 2;
+}
+
+.cookie-draggable.dragging {
+    cursor: grabbing;
+}
+
+.cookie-draggable.running-left,
+.rat-following.running-left {
+    cursor: default;
+    pointer-events: none;
+}
+
+.cookie-draggable.running-right,
+.rat-following.running-right {
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Cookie and rat run animations */
+@keyframes cookieRunToRight {
+    0% {
+        right: auto;
+        left: -150px;
+        transform: translateY(-50%);
+    }
+    100% {
+        right: 50px;
+        left: auto;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes ratRunToRight {
+    0% {
+        right: auto;
+        left: -270px; /* Cookie start (-150px) - gap (120px) */
+        transform: translateY(-50%);
+    }
+    100% {
+        right: 170px; /* Cookie end (50px) + width (100px) + gap (20px) */
+        left: auto;
+        transform: translateY(-50%);
+    }
+}
+
+/* Entrance Animation (legacy - not currently used) */
+.entrance-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.mouse-with-cookie {
+    position: relative;
+    animation: slideIn 2s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-left: -1.5rem;
+}
+
+.mouse {
+    font-size: 4rem;
+    display: inline-block;
+    animation: bounce 0.5s ease-in-out infinite alternate;
+    animation-delay: 2s;
+}
+
+.cookie {
+    font-size: 3rem;
+    display: inline-block;
+    animation: cookieBounce 0.5s ease-in-out infinite alternate;
+    animation-delay: 2s;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100vw);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes cookieBounce {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+}
+
+/* Glitch effect for logo */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.logo:hover {
+    animation: glitch 0.3s;
+}
