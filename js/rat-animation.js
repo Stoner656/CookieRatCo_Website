@@ -26,7 +26,7 @@
     const RUN_SPEED = 10; // px per step when running left
     const RETURN_SPEED = 15; // px per step when returning from right
     const ANIMATION_INTERVAL = 30; // ms between animation steps
-    const GAP_BETWEEN = 20; // px gap between cookie and rat
+    const GAP_BETWEEN = 100; // px gap between cookie and rat
 
     // Cookie animation frames (4 frames cycling)
     const cookieFrames = [
@@ -141,7 +141,7 @@
                         cookie.style.left = 'auto';
                         cookie.style.right = '0px';
                         rat.style.left = 'auto';
-                        rat.style.right = '-140px'; /* -(cookie width 100px + gap 40px) */
+                        rat.style.right = '-280px'; /* -(cookie width + gap) */
 
                         cookie.src = cookieFrames[0];
                         rat.src = ratFrames[0];

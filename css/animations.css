@@ -7,10 +7,10 @@
 .cookie-draggable {
     position: absolute;
     right: 0px; /* Start at right border */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100px;
-    height: auto;
+    bottom: 0;
+    transform: none;
+    width: auto;
+    height: 80px;
     cursor: grab;
     user-select: none;
     pointer-events: auto;
@@ -21,9 +21,9 @@
 
 .rat-following {
     position: absolute;
-    right: -140px; /* To the RIGHT of cookie: -(cookie width 100px + gap 40px) */
-    top: 50%;
-    transform: translateY(-50%);
+    right: -280px; /* To the RIGHT of cookie: -(cookie width + gap 140px) */
+    bottom: 0;
+    transform: none;
     width: 120px;
     height: auto;
     pointer-events: none;
@@ -53,12 +53,12 @@
     0% {
         right: auto;
         left: -150px;
-        transform: translateY(-50%);
+        transform: none;
     }
     100% {
         right: 50px;
         left: auto;
-        transform: translateY(-50%);
+        transform: none;
     }
 }
 
@@ -66,12 +66,12 @@
     0% {
         right: auto;
         left: -270px; /* Cookie start (-150px) - gap (120px) */
-        transform: translateY(-50%);
+        transform: none;
     }
     100% {
         right: 170px; /* Cookie end (50px) + width (100px) + gap (20px) */
         left: auto;
-        transform: translateY(-50%);
+        transform: none;
     }
 }
 
